@@ -8,7 +8,7 @@ const ResultGrid = ({ item }) => {
     const dispatch = useDispatch()
 const savetolocalStorage = (data) => {
 if(data){
-    console.log(data);
+    
     
     dispatch(addCollection(data))
     toast.success(' add to Collection', {

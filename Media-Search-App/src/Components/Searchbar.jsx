@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Search } from "lucide-react";
 import { setQuery } from "../Store/Features/SearchSlice";
 import Button from "./Button";
+import { toast } from "react-toastify";
 
 const Searchbar = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,9 @@ const Searchbar = () => {
   const HandleSubmit = (e) => {
     e.preventDefault();
 
-    if (!Text.trim()) return;
+    if (!Text.trim()) return(
+       toast.error("Please Enter a value on search Feild ")
+    );
 
     dispatch(setQuery(Text));
     setText("");

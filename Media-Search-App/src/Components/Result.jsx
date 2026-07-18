@@ -63,7 +63,7 @@ const Result = () => {
       } else {
        
         dispatch(SetResults(data));
-console.log(data);
+
 
       }
     } catch (error) {
